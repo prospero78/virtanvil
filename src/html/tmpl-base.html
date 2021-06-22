@@ -1,0 +1,28 @@
+{{define "base"}}
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <!-- Ссылка на CSS стили и иконку сайта -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <title>{{template "title" .}} - VirtAnvil</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href='/'>VirtAnvil</a></h1>
+    </header>
+    <nav>
+        <a href='/'>Домашняя страница</a>
+    </nav>
+    <main>
+        {{template "main" .}}
+    </main>
+    <!-- Вызываем шаблон подвала -->
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}
